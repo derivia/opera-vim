@@ -1,0 +1,96 @@
+function! opera#colors#definitions()
+  let l:result = {
+        \ 'bg':                   "#323334",
+        \ 'gui00':                "#323334",
+        \
+        \ 'gui01':                "#222224",
+        \ 'gui02':                "#ECEFF4",
+        \ 'gui03':                "#3F3F3F",
+        \ 'gui04':                "#DFDFDF",
+        \ 'gui05':                "#9F9FA2",
+        \ 'gui06':                "#525252",
+        \ 'gui07':                "#1E1E1E",
+        \ 'gui08':                "#C16069",
+        \ 'gui09':                "#D2876D",
+        \ 'gui0A':                "#ECCC87",
+        \ 'gui0B':                "#A2BF8A",
+        \ 'gui0C':                "#86C0D1",
+        \ 'gui0D':                "#80A0C2",
+        \ 'gui0E':                "#B58DAE",
+        \ 'gui0F':                "#5D80AE",
+        \
+        \ 'builtin':              "#8EBCBB",
+        \ 'base0':                "#000000",
+        \ 'base1':                "#1E1E1E",
+        \ 'base2':                "#2E2E2E",
+        \ 'base3':                "#262626",
+        \ 'base4':                "#3F3F3F",
+        \ 'base5':                "#525252",
+        \ 'base6':                "#6B6B6B",
+        \ 'base7':                "#979797",
+        \ 'base8':                "#DFDFDF",
+        \
+        \ 'fg':                   "#ECEFF4",
+        \ 'fg_alt':               "#727269",
+        \ 'blue':                 "#80A0C2",
+        \ 'cyan':                 "#86C0D1",
+        \ 'green':                "#A2BF8A",
+        \ 'grey':                 "#3F3F3F",
+        \ 'magenta':              "#B58DAE",
+        \ 'magenta_darken':       "#AF7F9F",
+        \ 'orange':               "#D2876D",
+        \ 'red':                  "#F36065",
+        \ 'teal':                 "#8EBCBB",
+        \ 'violet':               "#5D80AE",
+        \ 'yellow':               "#ECCC87",
+        \
+        \ 'git_added':            "#A2BF8A",
+        \ 'git_deleted':          "#C16069",
+        \ 'git_modified':         "#D2876D",
+        \ 'git_untracked':        "#86C0D1",
+        \
+        \ 'comment':              "#99999F",
+        \ 'label':                "#D2876D",
+        \ 'constant':             "#B58DAE",
+        \ 'delimiter':            "#80A0C2",
+        \ 'function':             "#8EBCBB",
+        \ 'identifier':           "#B58DAE",
+        \ 'include':              "#8EBCBB",
+        \ 'keyword':              "#80A0C2",
+        \ 'operator':             "#80A0C2",
+        \ 'preproc':              "#80A0C2",
+        \ 'special':              "#86C0D1",
+        \ 'string':               "#A2BF8A",
+        \ 'type':                 "#ECCC87",
+        \
+        \ 'ui_background':        "#323334",
+        \ 'ui_cursor_bg':         "#ECEFF4",
+        \ 'ui_cursor_fg':         "#1A1A2A",
+        \ 'ui_diff_add':          "#A2BF8A",
+        \ 'ui_diff_change':       "#86C0D1",
+        \ 'ui_diff_delete':       "#C16069",
+        \ 'ui_folded':            "#525252",
+        \ 'ui_linenr':            "#727269",
+        \ 'ui_popup_menu':        "#222224",
+        \ 'ui_selection':         "#5C748E",
+        \ 'ui_statusline':        "#222224",
+        \ 'ui_tabline':           "#525252",
+        \
+        \ 'md_code':              "#E6DFB8",
+        \ 'md_text':              "#44495E",
+        \ 'md_header':            "#555A6F",
+        \ }
+
+  let l:result.linenumber_bg = l:result.gui01
+  let l:result.linenumber_fg = l:result.gui05
+  let l:result.cursor_bg = l:result.ui_cursor_bg
+  let l:result.cursor_fg = l:result.ui_cursor_fg
+  let l:result.line = l:result.gui01
+  let l:result.normal = l:result.gui00
+  let l:result.buff = l:result.gui00
+  let l:result.fold_col = l:result.gui00
+  let l:result.sign_col = l:result.gui00
+  let l:result.folded = l:result.gui07
+
+  return l:result
+endfunction

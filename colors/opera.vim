@@ -70,6 +70,7 @@ call s:hi("Number", s:colors.magenta, "", "", "", "", "")
 call s:hi("Operator", s:colors.blue, "", "", "", "", "")
 call s:hi("String", s:colors.green, "", "", "", "", "")
 call s:hi("Type", s:colors.yellow, "", "", "", "", "" )
+call s:hi("@variable", s:colors.fg, "", "", "", "", "")
 
 " Preprocessor and Special Syntax
 call s:hi("Decorator", s:colors.gui0E, "", "", "", "", "")
@@ -87,10 +88,10 @@ call s:hi("Tag", s:colors.gui0A, "", "", "", "", "")
 
 " Status and Message
 call s:hi("ErrorMsg", s:colors.red, "", "", "", "", "")
-call s:hi("IncSearch", s:colors.gui0E, s:colors.gui01, "g", "NONE", "", "")
+call s:hi("IncSearch", s:colors.gui0E, s:colors.gui01, "", "NONE", "", "")
 call s:hi("ModeMsg", s:colors.fg_alt, "", "", "", "", "")
 call s:hi("MoreMsg", s:colors.gui0C, s:colors.gui02, "", "", "", "")
-call s:hi("Question", s:colors.fg_alt, "", "g", "", "", "")
+call s:hi("Question", s:colors.fg_alt, "", "", "", "", "")
 call s:hi("StatusLine", s:colors.gui00, s:colors.gui03, "", "", "", "")
 call s:hi("StatusLineNC", s:colors.gui01, s:colors.gui00, "", "", "underline", "")
 call s:hi("StatusLineTerm", s:colors.fg_alt, s:colors.gui00, "", "", "", "" )
@@ -107,31 +108,31 @@ call s:hi("Underlined", "", "", "", "", "underline", "")
 " UI Elements
 call s:hi("ColorColumn", "", s:colors.gui01, "", "", "", "")
 call s:hi("Conceal", s:colors.gui03, "", "", "", "", "")
-call s:hi("Cursor", s:colors.cursor_fg, s:colors.cursor_bg, "g", "NONE", "", "")
-call s:hi("CursorColumn", s:colors.gui0C, s:colors.gui00, "g", "", "", "")
-call s:hi("CursorIM", s:colors.gui02, s:colors.gui06, "", "g", "", "")
-call s:hi("CursorLine", "", s:colors.line, "g", "", "NONE", "")
-call s:hi("CursorLineNr", s:colors.linenumber_fg, s:colors.linenumber_bg, "g", "", "NONE", "")
+call s:hi("Cursor", s:colors.ui_cursor_fg, s:colors.ui_cursor_bg, "", "NONE", "", "")
+call s:hi("CursorColumn", s:colors.gui0C, s:colors.gui00, "", "", "", "")
+call s:hi("CursorIM", s:colors.gui02, s:colors.gui06, "", "", "", "")
+call s:hi("CursorLine", "", s:colors.line, "", "", "NONE", "")
+call s:hi("CursorLineNr", s:colors.linenumber_fg, s:colors.linenumber_bg, "", "", "NONE", "")
 call s:hi("EndOfBuffer", s:colors.buff, "", "", "", "", "")
-call s:hi("FoldColumn", s:colors.gui06, s:colors.gui01, "g", "", "", "")
-call s:hi("Folded", s:colors.gui02, s:colors.folded, "g", "", "", "")
+call s:hi("FoldColumn", s:colors.gui06, s:colors.gui01, "", "", "", "")
+call s:hi("Folded", s:colors.gui02, s:colors.folded, "", "", "", "")
 call s:hi("LineNr", s:colors.gui03, s:colors.gui00, "", "", "", "")
-call s:hi("MatchParen", s:colors.gui0C, s:colors.gui09, "", "", "", "")
+call s:hi("MatchParen", "NONE", s:colors.gui09, "", "", "", "")
 call s:hi("NonText", s:colors.fg_alt, s:colors.gui02, "", "", "", "")
-call s:hi("Normal", s:colors.fg, s:colors.normal, "g", "NONE", "", "")
+call s:hi("Normal", s:colors.fg, "", "NONE", "", "", "")
 call s:hi("Pmenu", s:colors.fg_alt, s:colors.gui01, "", "", "", "")
 call s:hi("PmenuSbar",  s:colors.fg_alt, s:colors.gui01, "", "", "", "")
 call s:hi("PmenuSel", s:colors.gui0C, s:colors.gui01, "", "", "", "")
 call s:hi("PmenuThumb", s:colors.gui0C, s:colors.gui01, "", "", "", "")
 call s:hi("Search", s:colors.gui0A, s:colors.gui02, "", "", "", "")
-call s:hi("SignColumn", s:colors.gui0D, s:colors.sign_col, "g", "", "", "")
+call s:hi("SignColumn", s:colors.gui0D, s:colors.sign_col, "", "", "", "")
 call s:hi("SpecialKey", s:colors.gui02, "", "", "", "", "")
-call s:hi("TabLine", s:colors.fg_alt, s:colors.gui00, "g", "NONE", "NONE", "NONE")
-call s:hi("TabLineFill", s:colors.gui0D, s:colors.gui01, "g", "NONE", "NONE", "NONE")
-call s:hi("TabLineSel", s:colors.gui03, s:colors.gui0F, "g", "NONE", "", "NONE")
-call s:hi("VertSplit", s:colors.gui04, "", "", "g", "", "")
+call s:hi("TabLine", s:colors.fg_alt, s:colors.gui00, "", "NONE", "NONE", "NONE")
+call s:hi("TabLineFill", s:colors.gui0D, s:colors.gui01, "", "NONE", "NONE", "NONE")
+call s:hi("TabLineSel", s:colors.gui03, s:colors.gui0F, "", "NONE", "", "NONE")
+call s:hi("VertSplit", s:colors.gui04, "", "", "", "", "")
 call s:hi("WildMenu", s:colors.gui0D, s:colors.gui01, "", "", "", "")
-call s:hi("iCursor", s:colors.cursor_bg, s:colors.gui06, "", "g", "", "")
+call s:hi("iCursor", s:colors.cursor_bg, s:colors.gui06, "", "", "", "")
 hi! link Annotation Decorator
 hi! link PreCondit PreProc
 hi! link Typedef Type
@@ -218,11 +219,11 @@ hi! link cssVendor Keyword
 " Rust Syntax
 call s:hi("import", s:colors.include, "", "", "", "", "")
 call s:hi("rustAttribute", s:colors.gui0D, "", "", "", "", "")
-call s:hi("rustEnum", s:colors.gui09, "", "", "", "", "")
+call s:hi("rustEnum", s:colors.cyan, "", "", "", "", "")
 call s:hi("rustMacro", s:colors.gui0C, "", "", "", "", "")
 call s:hi("rustModPath", s:colors.gui0A, "", "", "", "", "")
-call s:hi("rustPanic", s:colors.gui08, "", "", "", "", "")
-call s:hi("rustTrait", s:colors.gui0A, "", "", "", "", "")
+call s:hi("rustPanic", s:colors.red, "", "", "", "", "")
+call s:hi("rustTrait", s:colors.magenta, "", "", "", "", "")
 hi! link rustCommentLineDoc Comment
 hi! link rustDerive rustAttribute
 hi! link rustEnumVariant rustEnum
@@ -475,6 +476,7 @@ if has('nvim')
     hi! link DiagnosticUnderlineWarning Warning
     hi! link DiagnosticUnderlineError Error
 
+    hi! link NvimTreeSpecialFile Normal 
     hi! link LazyNormal ColorColumn
     hi! link LazyBackDrop ColorColumn
     hi! link LazyButton VertSplit

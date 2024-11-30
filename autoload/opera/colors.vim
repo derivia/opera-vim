@@ -86,11 +86,11 @@ function! opera#colors#definitions()
 
   let l:result.cursor_bg = l:result.ui_cursor_bg
   let l:result.cursor_fg = l:result.ui_cursor_fg
-  let l:result.normal = l:result.gui00
-  let l:result.buff = l:result.gui00
-  let l:result.fold_col = l:result.gui00
-  let l:result.sign_col = l:result.gui00
-  let l:result.folded = l:result.gui07
+  let l:result.normal = l:result.bg
+  let l:result.buff = l:result.bg
+  let l:result.fold_col = l:result.bg
+  let l:result.sign_col = l:result.bg
+  let l:result.folded = l:result.ui_folded
 
   return l:result
 endfunction

@@ -90,7 +90,7 @@ call s:hi("Tag", s:colors.gui0A, "", "", "", "", "")
 call s:hi("ErrorMsg", s:colors.red, "", "", "", "", "")
 call s:hi("IncSearch", s:colors.gui0E, s:colors.gui01, "", "NONE", "", "")
 call s:hi("ModeMsg", s:colors.fg_alt, "", "", "", "", "")
-call s:hi("MoreMsg", s:colors.gui0C, s:colors.gui02, "", "", "", "")
+call s:hi("MoreMsg", s:colors.fg_alt, "", "", "", "", "")
 call s:hi("Question", s:colors.fg_alt, "", "", "", "", "")
 call s:hi("StatusLine", s:colors.gui00, s:colors.gui03, "", "", "", "")
 call s:hi("StatusLineNC", s:colors.gui01, s:colors.gui00, "", "", "underline", "")
@@ -135,7 +135,7 @@ call s:hi("TabLineSel", s:colors.gui03, s:colors.gui0F, "", "NONE", "", "NONE")
 call s:hi("VertSplit", s:colors.gui04, "", "", "", "", "")
 call s:hi("WildMenu", s:colors.gui0D, s:colors.gui01, "", "", "", "")
 call s:hi("iCursor", s:colors.cursor_bg, s:colors.gui06, "", "", "", "")
-call s:hi("NormalFloat", "NONE", "NONE", "", "", "", "")
+call s:hi("NormalFloat", s:colors.bg, s:colors.bg, "", "", "", "")
 hi! link Annotation Decorator
 hi! link PreCondit PreProc
 hi! link Typedef Type
@@ -361,28 +361,6 @@ let s:colors.save_cpo = &cpoptions
 set cpoptions&vim
 let s:colors.palette = {}
 let s:colors.palette.display = { 'ctermbg': '0', 'guibg': 'gui01' }
-
-let s:colors.bg0 = { 'ctermbg': '60', 'guibg': s:colors.gui00 }
-let s:colors.palette.input = s:colors.bg0
-let s:colors.palette.indicator = extend({ 'ctermfg': '238', 'guifg': s:colors.gui01 }, s:colors.bg0)
-let s:colors.palette.spinner = extend({ 'ctermfg': '11', 'guifg': s:colors.gui0A, 'cterm': "", 'gui': "" }, s:colors.bg0)
-let s:colors.palette.search_text = extend({ 'ctermfg': '4', 'guifg': s:colors.gui0D, 'cterm': "", 'gui': "" }, s:colors.bg0)
-let s:colors.palette.preview = { 'ctermbg': '238', 'guibg': s:colors.gui00 }
-let s:colors.palette.selected = { 'ctermfg': '81', 'guifg': s:colors.gui0C, 'cterm': 'bold,underline', 'gui': 'bold,underline' }
-let s:colors.palette.current_selection = { 'ctermbg': '236', 'guibg': s:colors.gui01, 'cterm': "", 'gui': "" }
-let s:colors.palette.selected_sign = { 'ctermfg': '196', 'guifg': s:colors.gui0A }
-let s:colors.palette.current_selection_sign = s:colors.palette.selected_sign
-
-hi ClapShadow guibg=#3b3b4d
-
-let g:clap_fuzzy_match_hl_groups = [
-  \ ['75', s:colors.gui0A],
-\ ]
-
-let g:clap#themes#opera#palette = s:colors.palette
-let &cpoptions = s:colors.save_cpo
-unlet s:colors.save_cpo
-let g:clap_theme = 'opera'
 
 call s:hi("GitGutterAdd", s:colors.gui0B, "", "", "", "", "")
 call s:hi("GitGutterChange", s:colors.gui0D, "", "", "", "", "")

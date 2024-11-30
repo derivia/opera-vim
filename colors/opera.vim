@@ -135,7 +135,7 @@ call s:hi("TabLineSel", s:colors.gui03, s:colors.gui0F, "", "NONE", "", "NONE")
 call s:hi("VertSplit", s:colors.gui04, "", "", "", "", "")
 call s:hi("WildMenu", s:colors.gui0D, s:colors.gui01, "", "", "", "")
 call s:hi("iCursor", s:colors.cursor_bg, s:colors.gui06, "", "", "", "")
-call s:hi("NormalFloat", s:colors.bg, s:colors.bg, "", "", "", "")
+call s:hi("NormalFloat", s:colors.float_fg, s:colors.float_bg, "", "", "", "")
 hi! link Annotation Decorator
 hi! link PreCondit PreProc
 hi! link Typedef Type
@@ -454,20 +454,19 @@ if has('nvim')
     hi! link DiagnosticUnderlineWarning Warning
     hi! link DiagnosticUnderlineError Error
 
-    hi! link NvimTreeSpecialFile Normal 
-    hi! link LazyNormal ColorColumn
-    hi! link LazyBackDrop ColorColumn
+    hi! link NvimTreeSpecialFile Normal
+
+    hi! link LazyBackDrop NormalFloat
     hi! link LazyButton VertSplit
-    hi! link LazyNormal ColorColumn
-    hi! link LazyButton VertSplit
-    hi! link LazyDir Directory
-    hi! link LazySpecial Special
-    hi! link LazyItalic Italic
-    hi! link LazyWarning Warning
-    hi! link LazyError Error
     hi! link LazyComment Comment
+    hi! link LazyDir Directory
+    hi! link LazyError Error
     hi! link LazyInfo Info
-    
+    hi! link LazyItalic Italic
+    hi! link LazyNormal NormalFloat
+    hi! link LazySpecial Special
+    hi! link LazyWarning Warning
+
     hi! link TroubleIndentWs TroubleIndent
     hi! link TroubleIndentTop TroubleIndent
     hi! link TroubleIndentLast TroubleIndent

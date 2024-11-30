@@ -30,6 +30,9 @@ function! opera#colors#definitions()
         \ 'base7':                "#979797",
         \ 'base8':                "#DFDFDF",
         \
+        \ 'float_bg':             "#222224",
+        \ 'float_fg':             "#525252",
+        \
         \ 'fg':                   "#BCBFB4",
         \ 'fg_alt':               "#727269",
         \ 'blue':                 "#80A0C2",

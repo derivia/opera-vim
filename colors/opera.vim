@@ -111,12 +111,14 @@ call s:hi("Conceal", s:colors.gui03, "", "", "", "", "")
 call s:hi("Cursor", s:colors.ui_cursor_fg, s:colors.ui_cursor_bg, "", "NONE", "", "")
 call s:hi("CursorColumn", s:colors.gui0C, s:colors.gui00, "", "", "", "")
 call s:hi("CursorIM", s:colors.gui02, s:colors.gui06, "", "", "", "")
-call s:hi("CursorLine", "", s:colors.line, "", "", "NONE", "")
-call s:hi("CursorLineNr", s:colors.linenumber_fg, s:colors.linenumber_bg, "", "", "NONE", "")
+call s:hi("CursorLine", "", s:colors.ui_line_bg, "", "", "NONE", "")
+call s:hi("CursorLineNr", s:colors.ui_linenr_fg, s:colors.ui_line_bg, "", "", "NONE", "")
 call s:hi("EndOfBuffer", s:colors.buff, "", "", "", "", "")
 call s:hi("FoldColumn", s:colors.gui06, s:colors.gui01, "", "", "", "")
 call s:hi("Folded", s:colors.gui02, s:colors.folded, "", "", "", "")
-call s:hi("LineNr", s:colors.gui03, s:colors.gui00, "", "", "", "")
+call s:hi("LineNr", s:colors.fg, "NONE", "", "", "", "")
+call s:hi("LineNrAbove", s:colors.fg_alt, "NONE", "", "", "", "")
+call s:hi("LineNrBelow", s:colors.fg_alt, "NONE", "", "", "", "")
 call s:hi("MatchParen", "NONE", s:colors.gui09, "", "", "", "")
 call s:hi("NonText", s:colors.fg_alt, s:colors.gui02, "", "", "", "")
 call s:hi("Normal", s:colors.fg, "NONE", "NONE", "", "", "")
@@ -133,6 +135,7 @@ call s:hi("TabLineSel", s:colors.gui03, s:colors.gui0F, "", "NONE", "", "NONE")
 call s:hi("VertSplit", s:colors.gui04, "", "", "", "", "")
 call s:hi("WildMenu", s:colors.gui0D, s:colors.gui01, "", "", "", "")
 call s:hi("iCursor", s:colors.cursor_bg, s:colors.gui06, "", "", "", "")
+call s:hi("NormalFloat", "NONE", "NONE", "", "", "", "")
 hi! link Annotation Decorator
 hi! link PreCondit PreProc
 hi! link Typedef Type
@@ -168,11 +171,6 @@ hi link gitcommitSelectedArrow gitcommitSelectedFile
 hi link gitcommitUnmergedArrow gitcommitUnmergedFile
 hi link gitcommitUntracked gitcommitComment
 
-if &diff
-  call s:hi("CursorLine", "", "", "", "", "underline", "")
-else
-  call s:hi("CursorLine", "", s:colors.line, "", "", "", "" )
-endif
 call s:hi("Directory", s:colors.delimiter, "", "", "", "", "")
 call s:hi("DiffAdd", s:colors.gui0B, s:colors.gui00, "", "", "", "")
 call s:hi("DiffChange", s:colors.gui0C, s:colors.gui00, "", "", "", "")

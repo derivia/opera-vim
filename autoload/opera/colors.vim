@@ -70,7 +70,9 @@ function! opera#colors#definitions()
         \ 'ui_diff_change':       "#86C0D1",
         \ 'ui_diff_delete':       "#C16069",
         \ 'ui_folded':            "#525252",
-        \ 'ui_linenr':            "#727269",
+        \ 'ui_line_bg':           "#505050",
+        \ 'ui_linenr_bg':         "#686859",
+        \ 'ui_linenr_fg':         "#CACACA",
         \ 'ui_popup_menu':        "#222224",
         \ 'ui_selection':         "#5C748E",
         \ 'ui_statusline':        "#222224",
@@ -82,11 +84,8 @@ function! opera#colors#definitions()
         \ 'md_header':            "#BABCC0",
         \ }
 
-  let l:result.linenumber_bg = l:result.gui01
-  let l:result.linenumber_fg = l:result.gui05
   let l:result.cursor_bg = l:result.ui_cursor_bg
   let l:result.cursor_fg = l:result.ui_cursor_fg
-  let l:result.line = l:result.gui01
   let l:result.normal = l:result.gui00
   let l:result.buff = l:result.gui00
   let l:result.fold_col = l:result.gui00

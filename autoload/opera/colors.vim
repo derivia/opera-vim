@@ -76,9 +76,10 @@ function! opera#colors#definitions()
         \ 'ui_statusline':        "#222224",
         \ 'ui_tabline':           "#525252",
         \
-        \ 'md_code':              "#E6DFB8",
-        \ 'md_text':              "#44495E",
-        \ 'md_header':            "#555A6F",
+        \ 'md_list':              "#9A9A9A",
+        \ 'md_code':              "#72A273",
+        \ 'md_text':              "#818172",
+        \ 'md_header':            "#BABCC0",
         \ }
 
   let l:result.linenumber_bg = l:result.gui01

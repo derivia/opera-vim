@@ -124,7 +124,7 @@ call s:hi("Pmenu", s:colors.fg_alt, s:colors.gui01, "", "", "", "")
 call s:hi("PmenuSbar",  s:colors.fg_alt, s:colors.gui01, "", "", "", "")
 call s:hi("PmenuSel", s:colors.gui0C, s:colors.gui01, "", "", "", "")
 call s:hi("PmenuThumb", s:colors.gui0C, s:colors.gui01, "", "", "", "")
-call s:hi("Search", s:colors.gui0A, s:colors.gui02, "", "", "", "")
+call s:hi("Search", s:colors.fg_alt, s:colors.orange, "", "", "", "")
 call s:hi("SignColumn", s:colors.gui0D, s:colors.sign_col, "", "", "", "")
 call s:hi("SpecialKey", s:colors.gui02, "", "", "", "", "")
 call s:hi("TabLine", s:colors.fg_alt, s:colors.gui00, "", "NONE", "NONE", "NONE")
@@ -397,6 +397,8 @@ call s:hi("SneakMask", s:colors.gui09, s:colors.gui07, "", "", "", "")
 call s:hi("SneakLabel", s:colors.gui07, s:colors.gui07, "", "", "", "")
 call s:hi("SneakScope", s:colors.gui0B, s:colors.gui07, "", "", "", "")
 
+call s:hi("TroubleIndent", "NONE", "NONE", "", "", "", "")
+
 if has('nvim')
 
     call s:hi("Constructor", s:colors.gui02, "", "", "", "", "")
@@ -489,4 +491,9 @@ if has('nvim')
     hi! link LazyError Error
     hi! link LazyComment Comment
     hi! link LazyInfo Info
+    
+    hi! link TroubleIndentWs TroubleIndent
+    hi! link TroubleIndentTop TroubleIndent
+    hi! link TroubleIndentLast TroubleIndent
+    hi! link TroubleIndentMiddle TroubleIndent
 end

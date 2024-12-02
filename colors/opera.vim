@@ -61,7 +61,7 @@ call s:hi("healthWarning", s:colors.yellow, "", "", "", "", "")
 call s:hi("Boolean", s:colors.magenta, "", "", "", "", "")
 call s:hi("Character", s:colors.green, "", "", "", "", "")
 call s:hi("Comment", s:colors.comment, "", "", "", "", "")
-call s:hi("Constant", s:colors.magenta, "", "", "", "", "")
+call s:hi("Constant", s:colors.kinguio, "", "", "", "", "")
 call s:hi("Float", s:colors.lilac, "", "", "", "", "")
 call s:hi("Function", s:colors.teal, "", "", "", "", "")
 call s:hi("Identifier", s:colors.magenta_darken, "", "", "", "", "")
@@ -338,15 +338,16 @@ call s:hi("htmlTagName", s:colors.gui08, "", "", "", "", "")
 call s:hi("htmlTitle", s:colors.gui0D, "", "", "", "", "")
 
 " Ruby Syntax
+hi! link rubyFunction Function
+hi! link rubyConstant Constant
+hi! link rubyInclude Include
+
 call s:hi("rubyBlockParameter", s:colors.gui08, "", "", "", "", "")
 call s:hi("rubyBlockParameterList", s:colors.gui08, "", "", "", "", "")
 call s:hi("rubyClass", s:colors.gui0A, "", "", "", "", "")
-call s:hi("rubyConstant", s:colors.magenta, "", "", "", "", "")
 call s:hi("rubyControl", s:colors.gui0A, "", "", "", "", "")
 call s:hi("rubyEscape", s:colors.gui08, "", "", "", "", "")
-call s:hi("rubyFunction", s:colors.gui0D, "", "", "", "", "")
 call s:hi("rubyGlobalVariable", s:colors.gui08, "", "", "", "", "")
-call s:hi("rubyInclude", s:colors.gui0D, "", "", "", "", "")
 call s:hi("rubyIncluderubyGlobalVariable", s:colors.gui08, "", "", "", "", "")
 call s:hi("rubyInstanceVariable", s:colors.gui08, "", "", "", "", "")
 call s:hi("rubyInterpolation", s:colors.gui0C, "", "", "", "", "")
@@ -356,6 +357,7 @@ call s:hi("rubyRegexp", s:colors.gui0C, "", "", "", "", "")
 call s:hi("rubyRegexpDelimiter", s:colors.gui0C, "", "", "", "", "")
 call s:hi("rubyStringDelimiter", s:colors.green, "", "", "", "", "")
 call s:hi("rubySymbol", s:colors.gui0C, "", "", "", "", "")
+
 
 let s:colors.save_cpo = &cpoptions
 set cpoptions&vim

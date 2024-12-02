@@ -43,6 +43,7 @@ function! opera#colors#definitions()
         \ 'lilac':                "#DEC1DB",
         \ 'magenta_darken':       "#AF7F9F",
         \ 'orange':               "#D2876D",
+        \ 'kinguio':              "#FFA066",
         \ 'red':                  "#F36065",
         \ 'teal':                 "#8EBCBB",
         \ 'violet':               "#5D80AE",

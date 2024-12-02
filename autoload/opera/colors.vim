@@ -83,10 +83,6 @@ function! opera#colors#definitions()
         \ 'ui_statusline':        "#222224",
         \ 'ui_tabline':           "#525252",
         \
-        \ 'md_list':              "#9A9A9A",
-        \ 'md_code':              "#72A273",
-        \ 'md_text':              "#818172",
-        \ 'md_header':            "#BABCC0",
         \ }
 
   let l:result.cursor_bg = l:result.ui_cursor_bg

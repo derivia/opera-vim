@@ -182,135 +182,130 @@ hi! link cOperator Operator
 hi! link cPreCondit PreCondit
 
 " CSS Syntax
-call s:hi("cssAttrComma", s:colors.gui0E, "", "", "", "", "" )
-call s:hi("cssAttributeSelector", s:colors.gui0B, "", "", "", "", "" )
-call s:hi("cssBraces", s:colors.gui0E, "", "", "", "", "" )
-call s:hi("cssClassName", s:colors.gui0A, "", "", "", "", "" )
-call s:hi("cssClassNameDot", s:colors.gui0A, "", "", "", "", "" )
-call s:hi("cssDefinition", s:colors.gui0E, "", "", "", "", "" )
-call s:hi("cssFontAttr", s:colors.gui0A, "", "", "", "", "" )
-call s:hi("cssFontDescriptor", s:colors.gui0E, "", "", "", "", "" )
-call s:hi("cssFunctionName", s:colors.gui0D, "", "", "", "", "" )
-call s:hi("cssIdentifier", s:colors.gui0D, "", "", "", "", "" )
-call s:hi("cssImportant", s:colors.gui0E, "", "", "", "", "" )
-call s:hi("cssInclude", s:colors.gui05, "", "", "", "", "" )
-call s:hi("cssIncludeKeyword", s:colors.blue, "", "", "", "", "" )
-call s:hi("cssMediaType", s:colors.gui0A, "", "", "", "", "" )
-call s:hi("cssProp", s:colors.gui05, "", "", "", "", "" )
-call s:hi("cssPseudoClassId", s:colors.gui0A, "", "", "", "", "" )
-call s:hi("cssSelectorOp", s:colors.gui0E, "", "", "", "", "" )
-call s:hi("cssSelectorOp2", s:colors.gui0E, "", "", "", "", "" )
-call s:hi("cssStringQ", s:colors.green, "", "", "", "", "")
-call s:hi("cssTagName", s:colors.gui08, "", "", "", "", "" )
 hi! link csPreCondit PreCondit
 hi! link csType Type
 hi! link csXmlTag SpecialComment
 hi! link cssAttr Keyword
+hi! link cssAttrComma Delimiter
+hi! link cssAttributeSelector Function
 hi! link cssBraces Delimiter
-hi! link cssClassName cssDefinition
+hi! link cssClassName Type
+hi! link cssClassNameDot Type
 hi! link cssColor Number
-hi! link cssProp cssDefinition
-hi! link cssPseudoClass cssDefinition
-hi! link cssPseudoClassId cssPseudoClass
+hi! link cssDefinition Special
+hi! link cssFontAttr Keyword
+hi! link cssFontDescriptor Special
+hi! link cssFunctionName Function
+hi! link cssIdentifier Identifier
+hi! link cssImportant Special
+hi! link cssInclude Include
+hi! link cssIncludeKeyword Keyword
+hi! link cssMediaType Type
+hi! link cssProp Identifier
+hi! link cssPseudoClass Special
+hi! link cssPseudoClassId Type
+hi! link cssSelectorOp Operator
+hi! link cssSelectorOp2 Operator
+hi! link cssStringQ String
+hi! link cssTagName Tag
 hi! link cssVendor Keyword
 
 " Rust Syntax
-call s:hi("import", s:colors.include, "", "", "", "", "")
-call s:hi("rustAttribute", s:colors.gui0D, "", "", "", "", "")
-call s:hi("rustEnum", s:colors.cyan, "", "", "", "", "")
-call s:hi("rustMacro", s:colors.gui0C, "", "", "", "", "")
-call s:hi("rustModPath", s:colors.gui0A, "", "", "", "", "")
-call s:hi("rustPanic", s:colors.red, "", "", "", "", "")
-call s:hi("rustTrait", s:colors.magenta, "", "", "", "", "")
+hi! link @lsp.type.macro.rust Function
+hi! link import Include
+hi! link rustAttribute PreProc
 hi! link rustCommentLineDoc Comment
 hi! link rustDerive rustAttribute
+hi! link rustEnum Type
 hi! link rustEnumVariant rustEnum
 hi! link rustEscape SpecialChar
+hi! link rustMacro Function
+hi! link rustModPath Identifier
+hi! link rustPanic ErrorMsg
 hi! link rustQuestionMark Keyword
-hi! link @lsp.type.macro.rust Function
+hi! link rustTrait Type
 
-" JSON Syntax
-call s:hi("vimBracket", s:colors.gui0E, "", "", "", "", "")
-call s:hi("vimCommentTitle", s:colors.gui0D, "", "", "", "", "")
-call s:hi("vimContinue", s:colors.gui0D, "", "", "", "", "")
-call s:hi("vimFuncSID", s:colors.gui0D, "", "", "", "", "")
-call s:hi("vimMapModKey", s:colors.gui0D, "", "", "", "", "")
-call s:hi("vimNotation", s:colors.gui0A, "", "", "", "", "")
-call s:hi("vimOper", s:colors.gui0E, "", "", "", "", "")
-call s:hi("vimSep", s:colors.gui08, "", "", "", "", "")
-call s:hi("vimSetSep", s:colors.gui0C, "", "", "", "", "")
+" Vim Syntax
+hi! link vimBracket Delimiter
+hi! link vimCommentTitle Title
+hi! link vimContinue Special
+hi! link vimFuncSID Function
+hi! link vimMapModKey Special
+hi! link vimNotation Special
+hi! link vimOper Operator
+hi! link vimSep Delimiter
+hi! link vimSetSep Delimiter
 
 " Markdown Syntax
-call s:hi("markdownBlockquote", s:colors.md_text, "", "", "", "", "" )
-call s:hi("markdownBold", s:colors.gui0A, "", "", "", "", "")
-call s:hi("markdownCode", s:colors.md_code, "", "", "", "", "")
-call s:hi("markdownCodeBlock", s:colors.md_code, "", "", "", "", "")
-call s:hi("markdownCodeDelimiter", s:colors.md_code, "", "", "", "", "")
-call s:hi("markdownH1", s:colors.md_header, "", "", "", "", "")
-call s:hi("markdownH2", s:colors.md_header, "", "", "", "", "" )
-call s:hi("markdownH3", s:colors.md_header, "", "", "", "", "" )
-call s:hi("markdownH4", s:colors.md_header, "", "", "", "", "" )
-call s:hi("markdownH5", s:colors.md_header, "", "", "", "", "" )
-call s:hi("markdownH6", s:colors.md_header, "", "", "", "", "" )
-call s:hi("markdownHeadingDelimiter", s:colors.md_header, "", "", "", "", "")
-call s:hi("markdownHeadingRule", s:colors.gui0C, "", "", "", "", "")
-call s:hi("markdownId", s:colors.gui0E, "", "", "", "", "")
-call s:hi("markdownIdDeclaration", s:colors.gui0D, "", "", "", "", "")
-call s:hi("markdownIdDelimiter", s:colors.gui0E, "", "", "", "", "")
-call s:hi("markdownItalic", s:colors.gui0E, "", "", "", "", "")
-call s:hi("markdownLinkDelimiter", s:colors.gui0E, "", "", "", "", "")
-call s:hi("markdownLinkText", s:colors.gui0D, "", "", "", "", "")
-call s:hi("markdownListMarker", s:colors.md_text, "", "", "", "", "")
-call s:hi("markdownOrderedListMarker", s:colors.md_text, "", "", "", "", "")
-call s:hi("markdownRule", s:colors.gui0D, "", "", "", "", "")
-call s:hi("markdownUrl", s:colors.gui0C, "", "", "", "undercurl", "")
+hi! link markdownBlockquote Comment
+hi! link markdownBold Bold
+hi! link markdownCode PreProc
+hi! link markdownCodeBlock PreProc
+hi! link markdownCodeDelimiter PreProc
+hi! link markdownH1 Title
+hi! link markdownH2 Title
+hi! link markdownH3 Title
+hi! link markdownH4 Title
+hi! link markdownH5 Title
+hi! link markdownH6 Title
+hi! link markdownHeadingDelimiter Special
+hi! link markdownHeadingRule Special
+hi! link markdownId Identifier
+hi! link markdownIdDeclaration Identifier
+hi! link markdownIdDelimiter Delimiter
+hi! link markdownItalic Italic
+hi! link markdownLinkDelimiter Delimiter
+hi! link markdownLinkText Type
+hi! link markdownListMarker Special
+hi! link markdownOrderedListMarker Special
+hi! link markdownRule Special
+hi! link markdownUrl Underlined
 
 " JavaScript Syntax
-call s:hi("javaScriptBraces", s:colors.gui0C, "", "", "", "", "")
-call s:hi("javaScriptFunction", s:colors.gui0A, "", "", "", "", "")
-call s:hi("javaScriptIdentifier", s:colors.gui0A, "", "", "", "", "")
-call s:hi("javaScriptNull", s:colors.gui08, "", "", "", "", "")
-call s:hi("javaScriptNumber", s:colors.gui09, "", "", "", "", "")
-call s:hi("javaScriptRequire", s:colors.gui0C, "", "", "", "", "")
-call s:hi("javaScriptReserved", s:colors.gui0E, "", "", "", "", "" )
-call s:hi("jsArrowFunction", s:colors.gui0E, "", "", "", "", "" )
-call s:hi("jsClassKeyword", s:colors.gui0E, "", "", "", "", "" )
-call s:hi("jsClassMethodType", s:colors.gui0E, "", "", "", "", "" )
-call s:hi("jsDocParam", s:colors.gui0D, "", "", "", "", "" )
-call s:hi("jsDocTags", s:colors.gui0E, "", "", "", "", "" )
-call s:hi("jsExport", s:colors.gui0E, "", "", "", "", "" )
-call s:hi("jsExportDefault", s:colors.gui0E, "", "", "", "", "" )
-call s:hi("jsExtendsKeyword", s:colors.gui0E, "", "", "", "", "" )
-call s:hi("jsFrom", s:colors.gui0E, "", "", "", "", "" )
-call s:hi("jsFuncCall", s:colors.gui0D, "", "", "", "", "" )
-call s:hi("jsFunction", s:colors.gui0E, "", "", "", "", "" )
-call s:hi("jsGenerator", s:colors.gui0A, "", "", "", "", "" )
-call s:hi("jsGlobalObjects", s:colors.gui0A, "", "", "", "", "" )
-call s:hi("jsImport", s:colors.gui0E, "", "", "", "", "" )
-call s:hi("jsModuleAs", s:colors.gui0E, "", "", "", "", "" )
-call s:hi("jsModuleWords", s:colors.gui0E, "", "", "", "", "" )
-call s:hi("jsModules", s:colors.gui0E, "", "", "", "", "" )
-call s:hi("jsNull", s:colors.gui0A, "", "", "", "", "" )
-call s:hi("jsOperator", s:colors.gui0E, "", "", "", "", "" )
-call s:hi("jsStorageClass", s:colors.gui0E, "", "", "", "", "" )
-call s:hi("jsSuper", s:colors.gui08, "", "", "", "", "" )
-call s:hi("jsTemplateBraces", s:colors.gui08, "", "", "", "", "" )
-call s:hi("jsTemplateVar", s:colors.gui0B, "", "", "", "", "" )
-call s:hi("jsThis", s:colors.gui08, "", "", "", "", "" )
-call s:hi("jsUndefined", s:colors.gui0A, "", "", "", "", "" )
+hi! link javaScriptBraces Delimiter
+hi! link javaScriptFunction Keyword
+hi! link javaScriptIdentifier Identifier
+hi! link javaScriptNull Constant
+hi! link javaScriptNumber Number
+hi! link javaScriptRequire Special
+hi! link javaScriptReserved Keyword
+hi! link jsArrowFunction Keyword
+hi! link jsClassKeyword Keyword
+hi! link jsClassMethodType Keyword
+hi! link jsDocParam Comment
+hi! link jsDocTags Comment
+hi! link jsExport Keyword
+hi! link jsExportDefault Keyword
+hi! link jsExtendsKeyword Keyword
+hi! link jsFrom Keyword
+hi! link jsFuncCall Function
+hi! link jsFunction Keyword
+hi! link jsGenerator Keyword
+hi! link jsGlobalObjects Type
+hi! link jsImport Keyword
+hi! link jsModuleAs Keyword
+hi! link jsModuleWords Keyword
+hi! link jsModules Keyword
+hi! link jsNull Constant
+hi! link jsOperator Operator
+hi! link jsStorageClass Keyword
+hi! link jsSuper Constant
+hi! link jsTemplateBraces Delimiter
+hi! link jsTemplateVar Special
+hi! link jsThis Constant
+hi! link jsUndefined Constant
 
 " TypeScript Syntax
-call s:hi("typeScriptAjaxMethods", s:colors.gui0A, "", "", "", "", "")
-call s:hi("typeScriptDOMObjects", s:colors.gui0B, "", "", "", "", "")
-call s:hi("typeScriptFuncKeyword", s:colors.gui08, "", "", "", "", "" )
-call s:hi("typeScriptGlobalObject", s:colors.gui0A, "", "", "", "", "")
-call s:hi("typeScriptIdentifier", s:colors.gui0C, "", "", "", "", "" )
-call s:hi("typeScriptInterpolationDelimiter", s:colors.gui0E, "", "", "", "", "")
-call s:hi("typeScriptLabel", s:colors.gui0C, "", "", "", "", "" )
-call s:hi("typeScriptNull", s:colors.gui0E, "", "", "", "", "")
-call s:hi("typeScriptNull", s:colors.gui0E, "", "", "", "", "")
-call s:hi("typeScriptParens", s:colors.gui08, "", "", "", "", "")
-call s:hi("typescriptReserved", s:colors.gui0A, "", "", "", "", "")
+hi! link typeScriptAjaxMethods Function
+hi! link typeScriptDOMObjects Type
+hi! link typeScriptFuncKeyword Keyword
+hi! link typeScriptGlobalObject Type
+hi! link typeScriptIdentifier Identifier
+hi! link typeScriptInterpolationDelimiter Delimiter
+hi! link typeScriptLabel Label
+hi! link typeScriptNull Constant
+hi! link typeScriptParens Delimiter
+hi! link typescriptReserved Keyword
 hi! link typeScriptDocParam Comment
 hi! link typeScriptDocSeeTag Comment
 hi! link typeScriptDocTags vimCommentTitle
@@ -319,45 +314,40 @@ hi! link typeScriptLogicSymbols Boolean
 hi! link typeScriptOpSymbols Boolean
 
 " HTML
-call s:hi("htmlArg", s:colors.gui0A, "", "", "", "", "")
-call s:hi("htmlBold", s:colors.gui0A, "", "", "", "", "")
-call s:hi("htmlEndTag", s:colors.gui0E, "", "", "", "", "")
-call s:hi("htmlH1", s:colors.gui08, "", "", "", "", "")
-call s:hi("htmlH2", s:colors.gui08, "", "", "", "", "")
-call s:hi("htmlH3", s:colors.gui08, "", "", "", "", "")
-call s:hi("htmlH4", s:colors.gui08, "", "", "", "", "")
-call s:hi("htmlH5", s:colors.gui08, "", "", "", "", "")
-call s:hi("htmlH6", s:colors.gui08, "", "", "", "", "")
-call s:hi("htmlItalic", s:colors.gui0E, "", "", "", "", "")
-call s:hi("htmlLink", s:colors.gui0C, "", "", "", "undercurl", "")
-call s:hi("htmlSpecialChar", s:colors.gui0A, "", "", "", "", "")
-call s:hi("htmlSpecialTagName", s:colors.gui08, "", "", "", "", "")
-call s:hi("htmlTag", s:colors.gui0D, "", "", "", "", "")
-call s:hi("htmlTagN", s:colors.gui08, "", "", "", "", "")
-call s:hi("htmlTagName", s:colors.gui08, "", "", "", "", "")
-call s:hi("htmlTitle", s:colors.gui0D, "", "", "", "", "")
+hi! link htmlArg Special
+hi! link htmlBold Bold
+hi! link htmlEndTag Delimiter
+hi! link htmlH1 Title
+hi! link htmlH2 Title
+hi! link htmlH3 Title
+hi! link htmlH4 Title
+hi! link htmlH5 Title
+hi! link htmlH6 Title
+hi! link htmlItalic Italic
+hi! link htmlLink Underlined
+hi! link htmlSpecialChar Special
+hi! link htmlSpecialTagName Tag
+hi! link htmlTag Delimiter
+hi! link htmlTagN Identifier
+hi! link htmlTagName Tag
+hi! link htmlTitle Title
 
 " Ruby Syntax
 hi! link rubyFunction Function
 hi! link rubyConstant Constant
 hi! link rubyInclude Include
-
-call s:hi("rubyBlockParameter", s:colors.gui08, "", "", "", "", "")
-call s:hi("rubyBlockParameterList", s:colors.gui08, "", "", "", "", "")
-call s:hi("rubyClass", s:colors.gui0A, "", "", "", "", "")
-call s:hi("rubyControl", s:colors.gui0A, "", "", "", "", "")
-call s:hi("rubyEscape", s:colors.gui08, "", "", "", "", "")
-call s:hi("rubyGlobalVariable", s:colors.gui08, "", "", "", "", "")
-call s:hi("rubyIncluderubyGlobalVariable", s:colors.gui08, "", "", "", "", "")
-call s:hi("rubyInstanceVariable", s:colors.gui08, "", "", "", "", "")
-call s:hi("rubyInterpolation", s:colors.gui0C, "", "", "", "", "")
-call s:hi("rubyInterpolationDelimiter", s:colors.gui08, "", "", "", "", "")
-call s:hi("rubyInterpolationDelimiter", s:colors.gui08, "", "", "", "", "")
-call s:hi("rubyRegexp", s:colors.gui0C, "", "", "", "", "")
-call s:hi("rubyRegexpDelimiter", s:colors.gui0C, "", "", "", "", "")
-call s:hi("rubyStringDelimiter", s:colors.green, "", "", "", "", "")
-call s:hi("rubySymbol", s:colors.gui0C, "", "", "", "", "")
-
+hi! link rubyClass Keyword
+hi! link rubyControl Keyword
+hi! link rubyEscape Special
+hi! link rubyGlobalVariable Identifier
+hi! link rubyInclude Include
+hi! link rubyInstanceVariable Identifier
+hi! link rubyInterpolation Special
+hi! link rubyInterpolationDelimiter Delimiter
+hi! link rubyRegexp Special
+hi! link rubyRegexpDelimiter Delimiter
+hi! link rubyStringDelimiter Delimiter
+hi! link rubySymbol Special
 
 let s:colors.save_cpo = &cpoptions
 set cpoptions&vim

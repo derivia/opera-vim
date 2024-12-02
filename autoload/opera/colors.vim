@@ -40,6 +40,7 @@ function! opera#colors#definitions()
         \ 'green':                "#A2BF8A",
         \ 'grey':                 "#3F3F3F",
         \ 'magenta':              "#B58DAE",
+        \ 'lilac':                "#DEC1DB",
         \ 'magenta_darken':       "#AF7F9F",
         \ 'orange':               "#D2876D",
         \ 'red':                  "#F36065",

@@ -75,7 +75,7 @@ function! opera#colors#definitions()
         \ 'ui_diff_change':       "#86C0D1",
         \ 'ui_diff_delete':       "#C16069",
         \ 'ui_folded':            "#525252",
-        \ 'ui_line_bg':           "#505050",
+        \ 'ui_line_bg':           "#363537",
         \ 'ui_linenr_bg':         "#686859",
         \ 'ui_linenr_fg':         "#CACACA",
         \ 'ui_popup_menu':        "#222224",

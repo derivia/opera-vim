@@ -312,6 +312,7 @@ hi! link typeScriptDocTags vimCommentTitle
 hi! link typeScriptHtmlElemProperties Special
 hi! link typeScriptLogicSymbols Boolean
 hi! link typeScriptOpSymbols Boolean
+hi! link typescriptEndColons Normal
 
 " HTML
 hi! link htmlArg Special

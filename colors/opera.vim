@@ -211,7 +211,6 @@ hi! link cssTagName Tag
 hi! link cssVendor Keyword
 
 " Rust Syntax
-hi! link @lsp.type.macro.rust Function
 hi! link import Include
 hi! link rustAttribute PreProc
 hi! link rustCommentLineDoc Comment
